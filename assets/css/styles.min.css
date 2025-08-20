@@ -1,0 +1,330 @@
+
+
+.btn-primary,
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0078d3;
+    --bs-btn-border-color: #0078d3;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0066B3;
+    --bs-btn-hover-border-color: #0060A9;
+    --bs-btn-focus-shadow-rgb: 217, 235, 248;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0060A9;
+    --bs-btn-active-border-color: #005A9E;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0078d3;
+    --bs-btn-disabled-border-color: #0078d3
+}
+
+.btn-outline-primary,
+.btn-outline-success {
+    --bs-btn-color: #0078d3;
+    --bs-btn-border-color: #0078d3;
+    --bs-btn-focus-shadow-rgb: 0, 120, 211;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0078d3;
+    --bs-btn-hover-border-color: #0078d3;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0078d3;
+    --bs-btn-active-border-color: #0078d3;
+    --bs-btn-disabled-color: #0078d3;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #0078d3
+}
+
+.btn-secondary {
+    --bs-btn-color: #000000;
+    --bs-btn-bg: #d4af37;
+    --bs-btn-border-color: #d4af37;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #DABB55;
+    --bs-btn-hover-border-color: #D8B74B;
+    --bs-btn-focus-shadow-rgb: 32, 26, 8;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #DDBF5F;
+    --bs-btn-active-border-color: #D8B74B;
+    --bs-btn-disabled-color: #000000;
+    --bs-btn-disabled-bg: #d4af37;
+    --bs-btn-disabled-border-color: #d4af37
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: #d4af37;
+    --bs-btn-border-color: #d4af37;
+    --bs-btn-focus-shadow-rgb: 212, 175, 55;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #d4af37;
+    --bs-btn-hover-border-color: #d4af37;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #d4af37;
+    --bs-btn-active-border-color: #d4af37;
+    --bs-btn-disabled-color: #d4af37;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #d4af37
+}
+
+.btn-info {
+    --bs-btn-color: #000000;
+    --bs-btn-bg: #03913b;
+    --bs-btn-border-color: #03913b;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #29A258;
+    --bs-btn-hover-border-color: #1C9C4F;
+    --bs-btn-focus-shadow-rgb: 0, 22, 9;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #35A762;
+    --bs-btn-active-border-color: #1C9C4F;
+    --bs-btn-disabled-color: #000000;
+    --bs-btn-disabled-bg: #03913b;
+    --bs-btn-disabled-border-color: #03913b
+}
+
+.btn-outline-info {
+    --bs-btn-color: #03913b;
+    --bs-btn-border-color: #03913b;
+    --bs-btn-focus-shadow-rgb: 3, 145, 59;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #03913b;
+    --bs-btn-hover-border-color: #03913b;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #03913b;
+    --bs-btn-active-border-color: #03913b;
+    --bs-btn-disabled-color: #03913b;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #03913b
+}
+
+.btn-light {
+    --bs-btn-color: #000000;
+    --bs-btn-bg: #f2f2f2;
+    --bs-btn-border-color: #f2f2f2;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #CECECE;
+    --bs-btn-hover-border-color: #C2C2C2;
+    --bs-btn-focus-shadow-rgb: 36, 36, 36;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #C2C2C2;
+    --bs-btn-active-border-color: #B6B6B6;
+    --bs-btn-disabled-color: #000000;
+    --bs-btn-disabled-bg: #f2f2f2;
+    --bs-btn-disabled-border-color: #f2f2f2
+}
+
+.btn-outline-light {
+    --bs-btn-color: #f2f2f2;
+    --bs-btn-border-color: #f2f2f2;
+    --bs-btn-focus-shadow-rgb: 242, 242, 242;
+    --bs-btn-hover-color: #000000;
+    --bs-btn-hover-bg: #f2f2f2;
+    --bs-btn-hover-border-color: #f2f2f2;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #f2f2f2;
+    --bs-btn-active-border-color: #f2f2f2;
+    --bs-btn-disabled-color: #f2f2f2;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #f2f2f2
+}
+
+.accordion collapse {
+    border: 0
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border: none
+}
+
+.accordion-button:not(.collapsed) {
+    background: 0 0;
+    color: #ff9800;
+    box-shadow: none;
+    border-bottom: none
+}
+
+.accordion-button::after {
+    width: auto;
+    height: auto;
+    content: "+";
+    font-size: 40px;
+    background-image: none;
+    font-weight: 100;
+    color: #1b6ce5;
+    transform: translateY(-4px)
+}
+
+.accordion-button:not(.collapsed)::after {
+    width: auto;
+    height: auto;
+    background-image: none;
+    content: "-";
+    font-size: 48px;
+    transform: translate(-5px, -4px);
+    transform: rotate(0)
+}
+
+.fit-cover {
+    object-fit: cover
+}
+
+.countdown-section {
+    padding: 30px 0 60px;
+    background: #2980b9;
+    background: -webkit-linear-gradient(to right, #114357, #2980b9);
+    background: linear-gradient(to right, #114357, #2980b9);
+    color: #fff;
+    text-align: center
+}
+
+.countdown-header {
+    margin: 20px 0 30px
+}
+
+.countdown-header>* {
+    margin: 10px 0 0
+}
+
+.big-countdown .number-days,
+.big-countdown .number-hours,
+.big-countdown .number-minutes,
+.big-countdown .number-seconds {
+    margin-top: 30px;
+    font-size: 60px !important;
+    display: block;
+    line-height: 1
+}
+
+.big-countdown .txt-countdown {
+    font-size: 22px;
+    display: block;
+    line-height: 1
+}
+
+.boxed-countdown :not(.countdown-header) p {
+    display: inline-block
+}
+
+.boxed-countdown .number-days,
+.boxed-countdown .number-hours,
+.boxed-countdown .number-minutes,
+.boxed-countdown .number-seconds {
+    padding: 20px 15px;
+    min-width: 140px;
+    background: rgba(255, 255, 255, .8);
+    color: #000;
+    border-radius: 10px 10px 0 0;
+    text-shadow: 1px 1px 0 #fff
+}
+
+.boxed-countdown .txt-countdown {
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    border-radius: 0 0 10px 10px;
+    margin-top: 1px
+}
+
+.countdown div {
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, .12);
+    border-top: 5px solid var(--bs-primary)
+}
+
+.countdown div h3 {
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 15px
+}
+
+.countdown div h4 {
+    font-size: 16px;
+    font-weight: 600
+}
+
+@media (max-width:575px) {
+    .countdown div {
+        width: 70px;
+        padding: 10px 0;
+        margin: 10px 8px
+    }
+
+    .countdown div h3 {
+        font-size: 28px;
+        margin-bottom: 10px
+    }
+
+    .countdown div h4 {
+        font-size: 14px;
+        font-weight: 500
+    }
+}
+
+.bs-icon {
+    --bs-icon-size: .75rem;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--bs-icon-size);
+    width: calc(var(--bs-icon-size) * 2);
+    height: calc(var(--bs-icon-size) * 2);
+    color: var(--bs-primary)
+}
+
+.bs-icon-xs {
+    --bs-icon-size: 1rem;
+    width: calc(var(--bs-icon-size) * 1.5);
+    height: calc(var(--bs-icon-size) * 1.5)
+}
+
+.bs-icon-sm {
+    --bs-icon-size: 1rem
+}
+
+.bs-icon-md {
+    --bs-icon-size: 1.5rem
+}
+
+.bs-icon-lg {
+    --bs-icon-size: 2rem
+}
+
+.bs-icon-xl {
+    --bs-icon-size: 2.5rem
+}
+
+.bs-icon.bs-icon-primary {
+    color: var(--bs-white);
+    background: var(--bs-primary)
+}
+
+.bs-icon.bs-icon-primary-light {
+    color: var(--bs-primary);
+    background: rgba(var(--bs-primary-rgb), .2)
+}
+
+.bs-icon.bs-icon-semi-white {
+    color: var(--bs-primary);
+    background: rgba(255, 255, 255, .5)
+}
+
+.bs-icon.bs-icon-rounded {
+    border-radius: .5rem
+}
+
+.bs-icon.bs-icon-circle {
+    border-radius: 50%
+}
+@font-face {
+    font-family: 'csf';
+    src: url('/assets/fonts/alfont_com_riyad-bank-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'csf', sans-serif;
+}

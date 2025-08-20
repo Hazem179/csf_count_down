@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Society Support Fund - Countdown</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        @font-face {
+            font-family: 'Lato-Light';
+            src: url('/assets/fonts/Lato/Lato-Light.ttf') format('truetype');
+            font-style: normal;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-yellow: #fbbf24;
+            --light-blue: #3b82f6;
+        }
+
+        body {
+            font-family: 'Lato-Light', sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .main-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .logo-section {
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 1rem;
+        }
+        
+        .logo-image {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .fallback-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--light-blue));
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fallback-logo::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            transform: rotate(15deg);
+        }
+        
+        .fallback-logo::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 20px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            transform: rotate(-10deg);
+        }
+        
+        .brand-text {
+            margin-bottom: 0.5rem;
+        }
+        
+        .arabic-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .english-text {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--primary-blue);
+        }
+        
+        .countdown-section {
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 4.5rem;
+            font-family: 'Lato-Light', sans-serif;
+            font-weight: 300;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .countdown-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--secondary-yellow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .countdown-separator {
+            font-size: 4.5rem;
+            font-family: 'Lato-Light', sans-serif;
+            font-weight: 300;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin: 0 0.5rem;
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+        
+        .target-date {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .date-image {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .fallback-date {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        
+        .date-day {
+            color: var(--secondary-yellow);
+        }
+        
+        .date-month {
+            color: var(--primary-blue);
+        }
+        
+        .date-year {
+            color: var(--secondary-yellow);
+            margin-left: -0.2em;
+        }
+        
+        .date-separator {
+            color: var(--primary-blue);
+            font-weight: 400;
+            margin: 0 0.1em;
+        }
+        
+        .bottom-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .social-media-section {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .social-media-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-icon:hover {
+            background: var(--light-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icon.facebook:hover {
+            background: #1877f2;
+        }
+        
+        .social-icon.instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+        
+        .social-icon.tiktok:hover {
+            background: #000000;
+        }
+        
+        .social-icon.linkedin:hover {
+            background: #0077b5;
+        }
+        
+        @media (max-width: 768px) {
+            .countdown-timer {
+                gap: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 3.5rem;
+            }
+            
+            .countdown-separator {
+                font-size: 3.5rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.8rem;
+            }
+            
+            .fallback-date {
+                font-size: 2rem;
+            }
+            
+            .arabic-text {
+                font-size: 1rem;
+            }
+            
+            .english-text {
+                font-size: 0.9rem;
+            }
+            
+            .social-media-icons {
+                gap: 1rem;
+            }
+            
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .countdown-timer {
+                gap: 0.5rem;
+            }
+            
+            .countdown-number {
+                font-size: 2.8rem;
+            }
+            
+            .countdown-separator {
+                font-size: 2.8rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.7rem;
+            }
+            
+            .fallback-date {
+                font-size: 1.5rem;
+            }
+            
+            .social-media-icons {
+                gap: 0.8rem;
+            }
+            
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Logo and Brand Section -->
+        <div class="logo-section">
+            <img src="/assets/images/logo.png" alt="Civil Society Support Fund Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <div class="fallback-logo" style="display: none;">
+                <div class="brand-text">
+                    <div class="arabic-text">صندوق دعم مشروعات الجمعيات والمؤسسات الأهلية</div>
+                    <div class="english-text">Civil Society Support Fund</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Countdown Timer Section -->
+        <div class="countdown-section">
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">39</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">04</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">04</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">30</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Section Container -->
+        <div class="bottom-section">
+            <!-- Target Date Section -->
+            <div class="target-date">
+                <img src="/assets/images/date.png" alt="Target Date" class="date-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="fallback-date" style="display: none;">
+                    <span class="date-day">29</span>
+                    <span class="date-separator">:</span>
+                    <span class="date-month">SEP</span>
+                    <span class="date-separator">:</span>
+                    <span class="date-year">25</span>
+                </div>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="social-media-section">
+                <div class="social-media-title">Follow Us</div>
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com/csfegy" class="social-icon facebook" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="http://instagram.com/csfegy" class="social-icon instagram" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/csfegypt/" class="social-icon linkedin" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Countdown JavaScript -->
+    <script>
+        // Set the target date (September 29, 2025)
+        const targetDate = new Date('September 29, 2025 00:00:00').getTime();
+        
+        // Update the countdown every second
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            // Calculate time units
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Update the display
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // If the countdown is finished
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
